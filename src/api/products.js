@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const get_products = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/get-all");
+    const response = await fetch(`${process.env.SERVER_URL}/get-all`);
     const jsonData = await response.json();
     return jsonData;
   } catch (err) {
@@ -12,7 +12,7 @@ export const get_products = async () => {
 
 export const create_product = async (product) => {
   try {
-    await axios.post("http://localhost:5000/api/create", product);
+    await axios.post(`${process.env.SERVER_URL}/create`, product);
   } catch (err) {
     return err.message;
   }
@@ -21,7 +21,7 @@ export const create_product = async (product) => {
 export const update_product = async (id, product) => {
   try {
     const data = await axios.patch(
-      `http://localhost:5000/api/update/${id}`,
+      `${process.env.SERVER_URL}/update/${id}`,
       product
     );
     return data;
@@ -32,7 +32,7 @@ export const update_product = async (id, product) => {
 
 export const get_product = async (id) => {
   try {
-    const data = await axios.get(`http://localhost:5000/api/get-one/${id}`);
+    const data = await axios.get(`${process.env.SERVER_URL}/get-one/${id}`);
     return data.data;
   } catch (err) {
     return err.message;
@@ -41,7 +41,7 @@ export const get_product = async (id) => {
 
 export const delete_product = async (id) => {
   try {
-    const data = await axios.delete(`http://localhost:5000/api/delete/${id}`);
+    const data = await axios.delete(`${process.env.SERVER_URL}/delete/${id}`);
     return data.data;
   } catch (err) {
     return err.message;
