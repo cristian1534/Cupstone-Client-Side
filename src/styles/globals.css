@@ -1,0 +1,7 @@
+body {
+  background-color: #e6f1f1;
+}
+
+.navbar-nav .nav-link.active {
+  text-decoration: underline;
+}
