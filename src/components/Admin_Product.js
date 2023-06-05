@@ -7,7 +7,6 @@ const Admin_Product = () => {
   const fetch_products = async () => {
     const products_list = await get_products();
     setProducts(products_list)  
-    console.log(products)
   };
   useEffect(() => {
     fetch_products();
