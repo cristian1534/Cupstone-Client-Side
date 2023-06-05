@@ -1,6 +1,6 @@
 describe("Navigation", () => {
   it("Should navigate to ADMIN page", () => {
-    cy.visit("http://localhost:3000/");
+    cy.visit("https://cupstone-client-side.vercel.app/");
 
     cy.get("a[href*='admin']").click();
 
@@ -12,7 +12,7 @@ describe("Navigation", () => {
   });
 
   it("Should add a new Product.", () => {
-    cy.visit("/admin");
+    cy.visit("https://cupstone-client-side.vercel.app/admin");
 
     cy.get("input[name='name']").clear().type("Webcam");
 
@@ -34,13 +34,13 @@ describe("Navigation", () => {
   });
 
   it("Should delete the added Product", () => {
-    cy.request("GET", "http://localhost:5000/api/get-all").then((response) => {
+    cy.request("GET", "https://capstone-server-side-production.up.railway.app/api/get-all").then((response) => {
       const product = response.body.find(
         (product) => product.name === "Webcam"
       );
       const productId = product._id;
 
-      cy.visit("/admin");
+      cy.visit("https://cupstone-client-side.vercel.app/admin");
 
       cy.wait(5000);
 
@@ -51,13 +51,6 @@ describe("Navigation", () => {
       cy.get("input[name='id']").clear().type(`${productId}`);
 
       cy.contains("button", "Confirm").click();
-
-      // cy.request(
-      //   "DELETE",
-      //   `http://localhost:5000/api/delete/${productId}`
-      // ).then((response) => {
-      //   expect(response.status).to.eq(200);
-      // });
     });
   });
 });

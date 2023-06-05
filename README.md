@@ -1,38 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-TECH 
+![ScreeShot](https://i.ibb.co/QXZQP33/Screenshot-from-2023-06-05-14-05-29.png)
 
-## Getting Started
+## Final Project for Software Engineering Bootcamp
 
-First, run the development server:
+E-Tech is a sumulation of Tech Ecommerce where you can add to cart severals products, checkout the prices, delete from cart and create the order sending to Seller's database. Also as administrator you can Create, Update and Delete all products from the store Getting the real data from database.
 
-```bash
+On the Nav you will find 3 routing links:
+
+
+- Home
+- Cart
+- Admin 
+
+## Features
+
+- Import add image in Admin section by url of image instead local image.
+
+
+
+
+
+## Tech
+
+Developing This client side was usefull:
+- NextJS
+- Boostrap 5
+- Axios
+- useContext 
+- Jest
+- Cypress
+- Vercel
+
+## Installation
+
+E-TECH requires [Node.js](https://nodejs.org/) v18+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd client
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Testing with JEST
+Install the dependencies and devDependencies and start the server side.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```sh
+cd client
+npm i
+npm run test
+```
+![ScreenShot](https://i.ibb.co/0nYMqyr/Screenshot-from-2023-06-05-13-40-40.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Testing with Cypress for E2E Test
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Install the dependencies and devDependencies and start the server.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+cd client
+npm i
+npm run e2e
+```
 
-## Learn More
+![ScreenShot](https://i.ibb.co/6XFxJzD/Screenshot-from-2023-06-05-13-32-25.png)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## DEPLOY URL
+https://cupstone-client-side.vercel.app/
